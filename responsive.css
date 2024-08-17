@@ -1,0 +1,25 @@
+@media(max-width:699px)
+{
+    #hero .hero{
+        margin: 0;
+        padding-left: 60px;
+    }
+    #hero .container{
+        height: 60vh;
+    }
+    #hero{
+        background-position:-120px;
+    }
+    #services .service-item{
+        width: 100%;
+        margin: 2px;
+    }
+    #services .service-bottom{
+        margin: 4px;
+        padding: 5px;
+    }
+    #services .service-top{
+        padding: 10px;
+    }
+}
+

@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: o;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+li {
+  list-style: none;
+}
+p {
+  text-align: justify;
+  text-indent: 35px;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  word-spacing: 2px;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* hero Section */
+
+#hero {
+  background: url(image/heroimg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+#hero .hero {
+  max-width: 60%;
+  margin: 0 40%;
+}
+#hero .hero h1 {
+  color: rgba(255, 255, 255, 0.599);
+  letter-spacing: 3px;
+  width: fit-content;
+  position: relative;
+  display: inline;
+}
+#hero .hero a {
+  background-color: transparent;
+  border: 1px solid rgb(255, 0, 51);
+  border-radius: 5px;
+  padding: 8px 50px;
+  color: rgb(203, 42, 75);
+  font-weight: 700;
+  font-size: 20px;
+  transition: background-color, color 0.3s ease;
+}
+#hero .hero a:hover {
+  background-color: rgba(255, 0, 51, 0.608);
+  color: #fff;
+}
+#hero .hero .name {
+  color: transparent;
+  font-size: 50px;
+  font-family: cursive;
+  animation: namereveal 1s forwards 6s;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* Hero Section Names Animation */
+#hero .hero .name span {
+  width: 0%;
+  height: 100%;
+  background-color: crimson;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: namerevealbox 2s ease 5s;
+}
+#hero .hero .typewriter2 {
+  overflow: hidden;
+  border-right: 1px solid transparent;
+  width: 0;
+  white-space: nowrap;
+  animation: typewriter2 4s steps(15) forwards 7s;
+}
+#hero .hero .typewriter {
+  overflow: hidden;
+  border-right: 1px solid #fff;
+  width: 0;
+  white-space: nowrap;
+  animation: typewriter 5s steps(25) forwards;
+}
+@keyframes typewriter2 {
+  0% {
+    width: 0;
+    border-right: 1px solid #fff;
+  }
+  100% {
+    width: 220px;
+    border-right: 1px solid #fff;
+  }
+}
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 250px;
+  }
+}
+@keyframes namerevealbox {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes namereveal {
+  100% {
+    color: rgba(238, 10, 83, 0.667);
+  }
+}
+/* Hero section animation ends */
+/* Hero Section ends */
+
+/* Services Section starts */
+#services .service {
+  text-align: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+.section-title {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.section-title span {
+  color: crimson;
+}
+#services .service-top {
+  font-size: 1.2em;
+  line-height: 2rem;
+  font-weight: 400;
+  margin-bottom: 50px;
+  padding: 30px;
+  text-align: justify;
+}
+#services .service-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1%;
+  padding: 20px 0;
+}
+#services .service-item img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+#services .service-item h2 {
+  margin-bottom: 10px;
+}
+#services .service-item {
+  /* flex-basis: 80%; */
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+  background: url(image/servicebackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10px 20px;
+  border-radius: 10px;
+  color: #ffffffa3;
+  position: relative;
+  z-index: 1;
+}
+#services .service-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top right, black, rgba(255, 255, 255, 0.605));
+  opacity: 0.6;
+  z-index: -1;
+}
+/* Services section ends */
+/* Projects section starts */
+#projects .project-container{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+#projects .project-container .project-top{
+  margin-bottom: 30px;
+} 
+#projects .project-container .project-bottom{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+#projects .project-container .project-bottom .project-whole{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin: 10px auto;
+  max-width: 300px;
+}
+#projects .project-container .project-bottom .project-content{
+  padding: 20px;
+  background: url(image/projectbg.jpg);
+  background-size: cover;
+  color: #ffffffe9;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#projects .project-container .project-bottom .project-content h2{
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+#projects .project-container .project-bottom .project-content h3{
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+#projects .project-container .project-bottom .project-image{
+  background-image: url(image/projectimg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+}
+/* Projects section ends */
